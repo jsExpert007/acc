@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Maax';
+  font-weight: 400;
+  src: url('../../Fonts/Maax.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Maax';
+  font-weight: 500;
+  src: url('../../Fonts/Maax-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Maax';
+  font-weight: 700;
+  src: url('../../Fonts/Maax-Bold.ttf') format('truetype');
+}
+
+html {
+	font-family: 'Maax';
+}

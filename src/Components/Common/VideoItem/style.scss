@@ -1,0 +1,30 @@
+.video-item-component {
+  position: relative;
+  cursor: pointer;
+  
+  .thumb-img {
+    width: 100%;
+  }
+
+  .play-icon {
+    position: absolute;
+    left: calc(50% - 30px);
+    top: calc(50% - 30px);
+    width: 60px !important;
+  }
+
+  .logo {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    width: 150px !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .video-item-component {
+    .play-icon {
+      width: 50px;
+    }
+  }
+}

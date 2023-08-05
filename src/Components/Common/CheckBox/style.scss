@@ -1,0 +1,15 @@
+.check-box-component {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: solid 1px var(--gray700);
+
+  &.check {
+    background-color: var(--main-color);
+    border: none;
+  }
+
+  svg {
+    margin-top: -4px;
+  }
+}
