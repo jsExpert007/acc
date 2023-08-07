@@ -1,10 +1,10 @@
 import {
-  TOGGLE_NOTE_MODAL,
+  TOGGLE_AUTH_MODAL,
 } from '../Type';
 
-export const toggleNoteModal = (isNoteModal, note = "") => {
+export const toggleAuthModal = (isAuthModal, isLogin = false) => {
   return {
-    type: TOGGLE_NOTE_MODAL,
-    data: { isNoteModal, note }
+    type: TOGGLE_AUTH_MODAL,
+    data: { isAuthModal, isLogin }
   }
 }

@@ -5,7 +5,7 @@ import { ReactSVG } from 'react-svg'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import add from 'src/Assets/Images/Icons/add.svg';
-import logo from 'src/Assets/Images/Logo/logo.png'
+import logo from 'src/Assets/Images/Logo/logo-sm.png'
 import { toggleSideBar } from 'src/Redux/Actions';
 
 export default function Sidebar() {

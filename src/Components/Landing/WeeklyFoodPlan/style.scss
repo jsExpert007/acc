@@ -1,0 +1,40 @@
+.weekly-food-plan-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 140px 70px;
+
+  .weekly-food-plan-container {
+    .title {
+      font-size: 25px;
+      font-weight: 600;
+      margin-left: 30px;
+      color: var(--yellow800);
+      margin-bottom: 20px;
+    }
+
+    .week-food-list {
+      display: grid;
+      gap: 40px;
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .weekly-food-plan-component {
+    padding: 15px;
+
+    .weekly-food-plan-container {
+      .title {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 15px;
+      }
+
+      .week-food-list {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
