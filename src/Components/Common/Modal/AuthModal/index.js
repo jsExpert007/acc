@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import LoginBg from 'src/Assets/Images/Auth/login-bg.png';
 import { toggleAuthModal } from 'src/Redux/Actions';
 import {
   MainModal,
@@ -34,7 +33,9 @@ export default function SuccessModal() {
       isOpen={isAuthModal}
       onCloseModal={onCloseModal}>
       <div className='auth-modal-component'>
-        <AuthLeftSection />
+        <AuthLeftSection 
+          isAuthLogin={isAuthLogin}
+        />
         <div className='right-section'>
           {isAuthLogin ? (
             <Login

@@ -63,7 +63,10 @@
 }
 
 @media screen and (min-width: 992px) {
-  .footer-component {}
+  .footer-component {
+    background: no-repeat url('../../../Assets/Images/Footer/footer-bg.png');
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 991px) {

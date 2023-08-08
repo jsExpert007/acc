@@ -11,11 +11,21 @@
 
     &.active {
       border-bottom: solid 5px var(--yellow800);
+      color: var(--yellow800);
     }
   }
 
   .border {
     width: 1px;
     background-color: var(--black900);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .toggle-auth-component {
+
+    .auth-btn {
+      height: 50px;
+    }
   }
 }

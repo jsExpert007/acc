@@ -24,27 +24,27 @@ export default function Footer() {
           <div className='footer-section'>
             <h4>Fresh Recipe</h4>
             <Link className="footer_link" exact to="/" >Recipes</Link>
-            <Link className="footer_link" exact to="/terms" >Medicinal Recipe's</Link>
-            <Link className="footer_link" exact to="/privacy" >Copy Cat Recipe's</Link>
-            <Link className="footer_link" exact to="/privacy" >Fermentation</Link>
-            <Link className="footer_link" exact to="/privacy" >Meal Plan</Link>
+            <Link className="footer_link" exact to="/" >Medicinal Recipe's</Link>
+            <Link className="footer_link" exact to="/" >Copy Cat Recipe's</Link>
+            <Link className="footer_link" exact to="/" >Fermentation</Link>
+            <Link className="footer_link" exact to="/" >Meal Plan</Link>
           </div>
           <div className='footer-section'>
             <h4>In News</h4>
             <Link className="footer_link" exact to="/" >Articles</Link>
             <div className='v-c'>
-              <Link className="footer_link" exact to="/terms" >Become a Affiliate</Link>
+              <Link className="footer_link" exact to="/" >Become a Affiliate</Link>
               <img src={DecorationIcon} alt='decoration-icon' />
             </div>  
-            <Link className="footer_link" exact to="/privacy" >Join bookings</Link>
-            <Link className="footer_link" exact to="/privacy" >Terms Of Service</Link>
-            <Link className="footer_link" exact to="/privacy" >Private Policy</Link>
+            <Link className="footer_link" exact to="/" >Join bookings</Link>
+            <Link className="footer_link" exact to="/terms" >Terms Of Service</Link>
+            <Link className="footer_link" exact to="/privacy-policy" >Private Policy</Link>
           </div>
         </div>
         <div className='about-us-section'>
           <div className='footer-section about-us-list'>
             <h4>About US</h4>
-            <Link className="footer_link" exact to="/" >FAQs</Link>
+            <Link className="footer_link" exact to="/faqs" >FAQs</Link>
             <Link className="footer_link" exact to="/" >Advertise</Link>
             <Link className="footer_link" exact to="/" >Contact Us</Link>
             <Link className="footer_link" exact to="/" >Mobile</Link>

@@ -1,10 +1,9 @@
 import React from 'react';
 import './style.scss';
 
-export default function ContinueBtn({
+export default function SocialBtn({
   className = '',
   leftIcon,
-  rightIcon,
   btnText = "Next",
   isDisable = false,
   onClick,
@@ -13,12 +12,11 @@ export default function ContinueBtn({
 
   return (
     <button
-      className={`continue-btn cursor-pointer v-c h-c ${className} ${isDisable ? 'disabled' : ''}`}
+      className={`social-btn-component cursor-pointer v-c ${className} ${isDisable ? 'disabled' : ''}`}
       disabled={isDisable}
       onClick={onClick}>
       {leftIcon ? <img src={leftIcon} alt='btn-icon' className='left-icon' /> : null}
       <div className='btn-txt'>{btnText}</div>
-      {rightIcon ? <img src={rightIcon} alt='btn-icon' className='right-icon' /> : null}
     </button >
   );
 }

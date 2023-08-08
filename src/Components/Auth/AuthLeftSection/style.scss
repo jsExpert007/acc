@@ -3,8 +3,12 @@
   padding: 30px;
   background-color: var(--gray600);
 
-  .auth-bg {
-    width: 100%;
+  .auth-bg-content {
+    height: calc(100% - 120px);
+
+    .auth-bg {
+      width: 100%;
+    }
   }
 }
 
