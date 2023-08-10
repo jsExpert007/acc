@@ -1,0 +1,10 @@
+.recipes-detail-component {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+@media screen and (max-width: 991px) {
+  .recipes-detail-component {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

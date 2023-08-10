@@ -8,7 +8,6 @@ import {
   FormInput,
   ContinueBtn,
   ToggleAuth,
-  TextBtn,
   OrPolicy,
   SocialLogins,
 } from 'src/Components';
@@ -36,7 +35,7 @@ export default function SignUP({
 
   const onLogIn = () => {
     dispatch(toggleAuthModal(false));
-    // navigate('/dashboard')
+    navigate('/dashboard')
   };
 
   return (

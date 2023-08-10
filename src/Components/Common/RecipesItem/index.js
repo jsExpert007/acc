@@ -2,7 +2,7 @@ import React from 'react';
 import './style.scss';
 import StarIcon from 'src/Assets/Images/Icons/star.png';
 
-export default function TrendingCuisineItem({
+export default function RecipesItem({
   className = '',
   info,
   onClick
@@ -20,7 +20,7 @@ export default function TrendingCuisineItem({
 
   return (
     <div
-      className={`trending-cuisine-item-component ${className}`}
+      className={`recipes-item-component ${className}`}
       onClick={onClick}>
       <img src={img} alt='food-img' className='food-img' />
       <div className='detail-info v-c'>

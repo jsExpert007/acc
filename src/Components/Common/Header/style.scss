@@ -42,8 +42,14 @@
 
 @media screen and (max-width: 991px) {
   .header-component {
-    .box-menu {
-      font-size: 12px;
+    .header-container {
+      .menu-list {
+        justify-content: flex-end;
+
+        .box-menu {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
