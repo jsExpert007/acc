@@ -1,0 +1,11 @@
+.text-btn {
+  color: var(--black900);
+  font-size: 14px;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    border: none;
+    opacity: .9;
+  }
+}

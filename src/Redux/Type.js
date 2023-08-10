@@ -1,7 +1,7 @@
 /**
  * Modal
  */
-export const TOGGLE_NOTE_MODAL = 'TOGGLE_NOTE_MODAL';
+export const TOGGLE_AUTH_MODAL = 'TOGGLE_AUTH_MODAL';
 
 /**
  * Sidebar

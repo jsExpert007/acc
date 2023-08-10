@@ -217,6 +217,12 @@ input, textarea {
 }
 
 @media screen and (min-width: 992px) {
+  .container {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .show-web {
     display: block;
   }
@@ -250,6 +256,11 @@ input, textarea {
 }
 
 @media screen and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
   .show-mobile {
     display: block;
   }

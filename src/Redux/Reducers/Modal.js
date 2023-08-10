@@ -1,24 +1,24 @@
 import {
-  TOGGLE_NOTE_MODAL,
+  TOGGLE_AUTH_MODAL,
 } from '../Type';
 
 const INITIAL = {
-  isNoteModal: false,
-  note: "",
+  isAuthModal: false,
+  isLogin: "",
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state = INITIAL, action) => {
   switch (action.type) {
     /**
-     * Note Modal
+     * Auth Modal
      */
-    case TOGGLE_NOTE_MODAL: {
-      const { isNoteModal, note } = action.data;
+    case TOGGLE_AUTH_MODAL: {
+      const { isAuthModal, isLogin } = action.data;
       return {
         ...state,
-        isNoteModal,
-        note,
+        isAuthModal,
+        isLogin
       };
     }
 

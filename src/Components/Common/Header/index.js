@@ -1,47 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './style.scss';
 import { useDispatch } from 'react-redux';
-import logo from 'src/Assets/Images/Logo/logo.png'
-import Helper from 'src/Utils/Helper';
+import logo from 'src/Assets/Images/Logo/logo-sm.png'
+import { toggleAuthModal } from 'src/Redux/Actions';
 
 export default function Header() {
   const dispatch = useDispatch();
 
-  const [transform, setTransform] = useState(false);
-
-  const disableTopMenu = !(window.location.pathname?.split('/')[1] === '');
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleScroll = () => {
-    setTransform(window.scrollY > 0 ? true : false)
+  const onAuth = (isLogin) => {
+    dispatch(toggleAuthModal(true, isLogin));
   }
 
-  const showInactiveHeader = () => {
-    return !transform
-  };
-
-  const onPlan = () => {
-    const pathname = window.location.pathname.replaceAll("/", "");
-    if (!pathname) {
-      Helper.showToast('error', 3000, "Select the test prep you need help with before clicking Get Started!");
-    } else {
-    }
-  };
-
   return (
-    <div className={`header-component ${showInactiveHeader() ? 'inactive' : ''} ${disableTopMenu ? 'disable-top-menu' : ''}`}>
-      <div className="container header-container v-c">
-        <div >
-          <a href="/" className="menu-item" rel="noopener noreferrer">
+    <div className='header-component'>
+      <div className="header-container v-c">
+        <div className='logo-container'>
+          <a href="/" className="center" rel="noopener noreferrer">
             <img src={logo} className="logo" alt="logo-active" />
           </a>
         </div>
-        <div className="web-menu v-c">
-          <a href="https://gradegetter.com/sign-in" className="box-menu sign-in" rel="noopener noreferrer">SIGN IN</a>
-          <div className="box-menu sign-up-btn" onClick={onPlan}>Try it Free For 7 Days</div>
+        <div className='menu-list v-c'>
+          <div className='show-web-flex v-c'>
+            <div className='box-menu'>Recipes</div>
+            <div className='box-menu'>Notifications</div>
+            <div className='box-menu'>Recipe Pref</div>
+            <div className='box-menu'>Articles</div>
+          </div>
+          <div className='v-c'>
+            <div className='box-menu auth-btn' onClick={() => onAuth(false)}>SIGN UP</div>
+            <div className='box-menu auth-btn' onClick={() => onAuth(true)}>LOGIN</div>
+          </div>
         </div>
       </div>
     </div>

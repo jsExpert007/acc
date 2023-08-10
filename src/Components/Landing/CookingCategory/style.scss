@@ -1,0 +1,12 @@
+.cooking-category-component {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .cooking-category-component {
+    display: flex;
+    gap: 5px;
+  }
+}

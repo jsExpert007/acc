@@ -1,5 +1,24 @@
 @import './Assets/scss/index.scss';
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  #main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
 .overlay-loader {
   z-index: 1010;
   position: fixed;

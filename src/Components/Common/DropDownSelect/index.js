@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './style.scss';
 import _ from 'lodash';
-import { ReactSVG } from 'react-svg'
-import ArrowDownIcon from 'src/Assets/Images/Icons/arrow-down.svg';
 import ArrowUpIcon from 'src/Assets/Images/Icons/arrow-up.svg';
 
 export default function DropDownSelect({
@@ -33,7 +31,7 @@ export default function DropDownSelect({
             <div className='placeholder-des'>{placeholder}</div>
           )}
         </div>
-        <ReactSVG src={isDropList ? ArrowUpIcon : ArrowDownIcon} className='arrow-icon' />
+        <img src={ArrowUpIcon} alt='arrow-icon' className={`${isDropList ? "arrow-up" : "arrow-down"}`} />
       </div>
       {(isDropList && !_.isEmpty(dropListInfo)) && <div className='drop-list-container shadow-object'>
         {dropListInfo.map((item, index) => (
