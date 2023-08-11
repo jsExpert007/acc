@@ -1,4 +1,4 @@
-.trending-cuisine-item-component {
+.recipes-item-component {
   cursor: pointer;
 
   .food-img {
@@ -45,12 +45,12 @@
 }
 
 @media screen and (max-width: 991px) {
-  .cooking-category-item-component {
-    width: 57px;
+  .recipes-item-component {
+    width: 100%;
 
     .category-logo {
-      width: 57px;
-      height: 57px;
+      width: 50px;
+      height: 50px;
     }
 
     .name {

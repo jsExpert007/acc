@@ -1,0 +1,17 @@
+.recipes-page {
+  padding: 81px 0;
+
+  .filter-search {
+    padding: 90px 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .recipes-page {
+    padding: 30px 15px;
+
+    .filter-search {
+      padding: 50px 0;
+    }
+  }
+}

@@ -38,7 +38,7 @@ export default function Login({
 
   const onLogIn = () => {
     dispatch(toggleAuthModal(false));
-    // navigate('/dashboard')
+    navigate('/dashboard')
   };
 
   return (

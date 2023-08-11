@@ -4,13 +4,15 @@ import FilterIcon from 'src/Assets/Images/Icons/filter-dark-icon.svg';
 import SearchIcon from 'src/Assets/Images/Icons/search-icon.svg';
 import { CategoryDropDown } from 'src/Components';
 
-export default function FilterSearch() {
+export default function FilterSearch({
+  className = '',
+}) {
 
   const [searchText, setSearchText] = useState("");
   const onChangeSearchText = (v) => setSearchText(v);
 
   return (
-    <div className='filter-search-component'>
+    <div className={`filter-search-component ${className}`}>
       <div className='search-content v-c'>
         <CategoryDropDown
           value={"All Categories"}

@@ -3,8 +3,13 @@ import './style.scss';
 import { useDispatch } from 'react-redux';
 import logo from 'src/Assets/Images/Logo/logo-sm.png'
 import { toggleAuthModal } from 'src/Redux/Actions';
+import Shipping from './Shipping';
+import Profile from './Profile';
 
-export default function Header() {
+export default function Header({
+  isDashboard
+}) {
+
   const dispatch = useDispatch();
 
   const onAuth = (isLogin) => {
@@ -26,10 +31,17 @@ export default function Header() {
             <div className='box-menu'>Recipe Pref</div>
             <div className='box-menu'>Articles</div>
           </div>
-          <div className='v-c'>
-            <div className='box-menu auth-btn' onClick={() => onAuth(false)}>SIGN UP</div>
-            <div className='box-menu auth-btn' onClick={() => onAuth(true)}>LOGIN</div>
-          </div>
+          {isDashboard ? (
+            <div className='v-c'>
+              <Shipping />
+              <Profile />
+            </div>
+          ) : (
+            <div className='v-c'>
+              <div className='box-menu auth-btn' onClick={() => onAuth(false)}>SIGN UP</div>
+              <div className='box-menu auth-btn' onClick={() => onAuth(true)}>LOGIN</div>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,0 +1,13 @@
+.lading-page {
+
+}
+
+@media screen and (max-width: 991px) {
+  .lading-page {
+    padding: 15px;
+
+    .filter-search {
+      padding: 50px 0 30px;
+    }
+  }
+}
