@@ -3,12 +3,19 @@ import './style.scss';
 import { useNavigate } from 'react-router-dom';
 import { categories } from './categories';
 import { CookingCategoryItem } from 'src/Components';
+import { showToast } from 'src/Utils/Helper';
 
-export default function CookingCategory() {
+export default function CookingCategory({
+  isLanding
+}) {
   const navigate = useNavigate();
 
-  const onCookingCategory = () => {
-    navigate('/dashboard/recipes')
+  const onCookingCategory = (info) => {
+    if (isLanding) {
+      showToast("error", 3000, "Please Login!")
+    } else {
+      navigate(`/dashboard/${info.link}`)
+    }
   }
 
   return (

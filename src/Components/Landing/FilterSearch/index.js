@@ -6,6 +6,9 @@ import { CategoryDropDown } from 'src/Components';
 
 export default function FilterSearch({
   className = '',
+  category,
+  dropListInfo,
+  onSelectCategory,
 }) {
 
   const [searchText, setSearchText] = useState("");
@@ -15,7 +18,9 @@ export default function FilterSearch({
     <div className={`filter-search-component ${className}`}>
       <div className='search-content v-c'>
         <CategoryDropDown
-          value={"All Categories"}
+          value={category.name}
+          dropListInfo={dropListInfo}
+          onSelect={onSelectCategory}
         />
         <input
           className='search-input'

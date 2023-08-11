@@ -5,11 +5,13 @@ import {
   TrendingCuisineList,
 } from 'src/Components';
 
-export default function TrendingCuisines() {
+export default function TrendingCuisines({
+  isLanding
+}) {
 
   return (
     <div className='trending-cuisines-component'>
-      <CookingCategory />
+      <CookingCategory isLanding={isLanding} />
       <TrendingCuisineList />
     </div>
   );
