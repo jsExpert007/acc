@@ -6,18 +6,14 @@ export default function TermsPage() {
   return (
     <div className="terms-page">
       <div class="container">
-        <h2>Terms of Service
-        </h2>
-        <p>Effective Date: June 13, 2023
-        </p>
-        <p>Terms of Service
-        </p>
+        <h2>Terms of Service</h2>
+        <p>Effective Date: June 13, 2023</p>
+        <p>Terms of Service</p>
         <p>Welcome to [A Chefs Cuisine]! These Terms of Service ("Terms") govern your access to and use of our website and
           mobile application (collectively referred to as the "A Chefs Cuisine"). By accessing or using our Platform, you
           agree to be bound by these Terms. Please read them carefully.
         </p>
-        <p>User Conduct
-        </p>
+        <p>User Conduct</p>
         <p>a. Eligibility: You must be at least 13 years old to use our Platform. If you are under 18 years old, you
           represent and warrant that you have obtained the consent of a parent or legal guardian to use the Platform.
         </p>
@@ -32,8 +28,7 @@ export default function TermsPage() {
         <p>d. Removal of Accounts. Company reserves the right to remove or reclaim any usernames at any time and for any
           reason.
         </p>
-        <p>Intellectual Property
-        </p>
+        <p>Intellectual Property</p>
         <p>a. Ownership: The Platform and its content, including recipes, videos, trademarks, and logos, are owned by [A
           Chefs Cuisine] or its licensors and are protected by intellectual property laws. You may not use, copy, or
           distribute any content from the Platform without our prior written consent.

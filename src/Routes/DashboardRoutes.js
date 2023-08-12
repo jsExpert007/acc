@@ -6,6 +6,9 @@ import {
   FoodPornPage,
   MemberFeedPage,
   FoodStoragePage,
+
+  PolicyPage,
+  ProfilePage,
 } from 'src/Pages';
 
 
@@ -20,6 +23,10 @@ function DashboardRoutes() {
           <Route exact path="/food-porn" element={<FoodPornPage />} />
           <Route exact path="/member-feed" element={<MemberFeedPage />} />
           <Route exact path="/food-storage" element={<FoodStoragePage />} />
+
+          <Route exact path="/privacy-policy" element={<PolicyPage />} />
+          <Route exact path="/profile" element={<ProfilePage />} />
+
         </Routes>
       </div>
     </div>

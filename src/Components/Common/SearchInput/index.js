@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.scss';
 import SearchIcon from 'src/Assets/Images/Icons/search-icon.svg';
-import { ReactSVG } from 'react-svg';
 
 export default function SearchInput({
   className = '',
@@ -13,13 +12,15 @@ export default function SearchInput({
 
   return (
     <div className={`search-input-component ${className}`}>
-      <ReactSVG src={SearchIcon} className="search-icon" />
       <input
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={e => onChange(e.currentTarget.value)}
       />
+      <div className='search-icon-content center '>
+        <img src={SearchIcon} alt='search-icon' className='search-icon' />
+      </div>
     </div>
   );
 }

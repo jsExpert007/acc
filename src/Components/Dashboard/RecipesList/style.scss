@@ -1,10 +1,16 @@
 .recipes-list-component {
-  padding: 0 25px;
+  padding: 0 270px 0 25px;
 
   .recipes-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px 20px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .recipes-list-component {
+    padding: 0 200px 0 25px;
   }
 }
 
@@ -15,6 +21,7 @@
     width: 100%;
 
     .recipes-list-container {
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
     }
   }

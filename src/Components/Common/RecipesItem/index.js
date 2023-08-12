@@ -22,7 +22,9 @@ export default function RecipesItem({
     <div
       className={`recipes-item-component ${className}`}
       onClick={onClick}>
-      <img src={img} alt='food-img' className='food-img' />
+      <div className='food-img-content'>
+        <img src={img} alt='food-img' className='food-img' />
+      </div>
       <div className='detail-info v-c'>
         <div className='avatar-name v-c'>
           <img src={avatar} alt='avatar' className='avatar' />

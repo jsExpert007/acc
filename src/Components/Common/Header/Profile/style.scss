@@ -22,10 +22,20 @@
     background-color: var(--white900);
     color: var(--black900);
 
-    .profile-item {
-      gap: 10px;
+    .header {
+      background-color: var(--yellow800);
       padding: 5px 15px;
+      color: var(--white900);
+    }
+
+    .profile-item {
+      gap: 15px;
+      padding: 5px 20px;
       cursor: pointer;
+
+      &:hover {
+        background-color: var(--white800);
+      }
     }
   }
 }

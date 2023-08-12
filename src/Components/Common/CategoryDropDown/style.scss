@@ -7,25 +7,24 @@
 
   .select-header {
     height: 100%;
-    width: 135px;
     border-radius: 20px;
     justify-content: space-between;
     background-color: var(--gray500);
     padding: 0 15px;
     cursor: pointer;
 
+    .value {
+      font-size: 18px;
+      font-weight: 500;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+    }
+
     .arrow-down {
       transform: rotate(180deg);
     }
-  }
-
-  .value {
-    font-size: 18px;
-    font-weight: 500;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    display: -webkit-box;
-    overflow: hidden;
   }
 
   .drop-list-container {
@@ -53,17 +52,14 @@
   .category-drop-down-component {
 
     .select-header {
-      width: 50px;
-
       .value {
         font-size: 12px;
       }
-
     }
 
     .drop-list-container {
       height: 200px;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 }

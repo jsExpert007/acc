@@ -17,7 +17,7 @@ export default function LandingPage() {
   return (
     <div className="lading-page">
       <LandingStart />
-      <FilterSearch 
+      <FilterSearch
         className='filter-search'
         category={currentCategory}
         dropListInfo={RecipesCategories}

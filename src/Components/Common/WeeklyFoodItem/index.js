@@ -16,7 +16,9 @@ export default function WeeklyFoodItem({
     <div
       className={`weekly-food-item-component ${className}`}
       onClick={onClick}>
-      <img src={logo} alt='food-logo' className='food-logo' />
+        <div className='food-logo-content'>
+          <img src={logo} alt='food-logo' className='food-logo' />
+        </div>
       <div className='day'>{day}</div>
     </div>
   );

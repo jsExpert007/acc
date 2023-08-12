@@ -3,6 +3,7 @@ import { Header, Footer } from 'src/Components';
 import {
   LandingPage,
 
+  ArticlePage,
   TermsPage,
   PolicyPage,
   FaqPage,
@@ -16,6 +17,7 @@ function LandingRoutes() {
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
 
+          <Route exact path="/articles" element={<ArticlePage />} />
           <Route exact path="/terms" element={<TermsPage />} />
           <Route exact path="/privacy-policy" element={<PolicyPage />} />
           <Route exact path="/faqs" element={<FaqPage />} />

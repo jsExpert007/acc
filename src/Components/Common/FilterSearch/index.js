@@ -18,6 +18,7 @@ export default function FilterSearch({
     <div className={`filter-search-component ${className}`}>
       <div className='search-content v-c'>
         <CategoryDropDown
+          className='category-drop-down'
           value={category.name}
           dropListInfo={dropListInfo}
           onSelect={onSelectCategory}

@@ -1,0 +1,32 @@
+.acc-switch-component {
+  width: 55px;
+  height: 24px;
+  border-radius: 19px;
+  background-color: var(--black900);
+  padding: 2px;
+  justify-content: flex-start;
+  cursor: pointer;
+
+  &.active {
+    justify-content: flex-end !important;
+  }
+
+  .circle {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    background-color: var(--white900);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .acc-switch-component {
+    width: 40px;
+    height: 18px;
+
+    .circle {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
