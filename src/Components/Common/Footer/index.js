@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
           <div className='footer-section'>
             <h4>In News</h4>
-            <Link className="footer_link" exact to="/" >Articles</Link>
+            <Link className="footer_link" exact to="/articles" >Articles</Link>
             <div className='v-c'>
               <Link className="footer_link" exact to="/" >Become a Affiliate</Link>
               <img src={DecorationIcon} alt='decoration-icon' />

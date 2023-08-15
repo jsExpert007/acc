@@ -1,0 +1,15 @@
+.more-info-component {
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .more-info-component {}
+}

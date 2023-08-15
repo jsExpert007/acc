@@ -1,18 +1,31 @@
 .cooking-category-item-component {
-  width: 130px;
   cursor: pointer;
+  margin-bottom: 15px;
 
-  &:hover {
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 0.5s;
+  &.active {
+    margin-top: -20px;
+
+    .name {
+      color: var(--yellow800);
+      margin-top: 30px;
+    }
   }
 
-  .category-logo {
+  .logo-content {
     width: 130px;
     height: 130px;
     border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    .logo-bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--black900_50);
+    }
   }
 
   .name {
@@ -21,14 +34,21 @@
     text-align: center;
     padding: 0 15px;
     line-height: 20px;
+    margin-top: 10px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .cooking-category-item-component {
-    width: 50px;
-
-    .category-logo {
+    &.active {
+      margin-top: 0;
+  
+      .name {
+        color: var(--yellow800);
+        margin-top: 10px;
+      }
+    }
+    .logo-content {
       width: 50px;
       height: 50px;
     }

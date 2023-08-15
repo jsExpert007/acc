@@ -7,10 +7,13 @@
   margin-right: auto;
 
   .search-content {
-    flex: 1;
     border: solid 1px var(--gray900);
     border-radius: 20px;
     height: 40px;
+
+    .category-drop-down {
+      width: 270px;
+    }
 
     .search-input {
       width: 100%;
@@ -41,11 +44,16 @@
 
 @media screen and (max-width: 991px) {
   .filter-search-component {
+    flex-direction: column;
     width: 100%;
-    padding: 15px 0 30px;
+    // padding: 15px 0 30px;
 
     .search-content {
       height: 30px;
+
+      .category-drop-down {
+        width: 220px;
+      }
 
       .search-input {
         font-size: 14px;

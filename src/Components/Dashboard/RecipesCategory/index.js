@@ -1,18 +1,24 @@
 import React from 'react';
 import './style.scss';
-import { categories } from './categories';
 import { CookingCategoryItem } from 'src/Components';
+import { RecipesCategories } from 'src/Constant';
 
-export default function RecipesCategory() {
+export default function RecipesCategory({
+  currentRecipes,
+  onClick,
+}) {
 
   return (
     <div className='recipes-category-component'>
-      <h3 className='title'>Food</h3>
+      <h3 className='title'>{currentRecipes.name}</h3>
       <div className='category-list'>
-        {categories.map((item, index) => (
+        {RecipesCategories.map((item, index) => (
+          item.id !== "0" &&
           <CookingCategoryItem
             key={index}
             info={item}
+            selectedId={currentRecipes.id}
+            onClick={onClick}
           />
         ))}
       </div>

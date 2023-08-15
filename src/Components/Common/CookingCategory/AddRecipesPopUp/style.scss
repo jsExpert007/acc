@@ -1,0 +1,37 @@
+.add-recipe-pop-up-component {
+  border: solid 1px var(--black900);
+  border-radius: 20px;
+  width: 250px;
+  background-color: var(--white900);
+  overflow: hidden;
+
+  .header {
+    height: 30px;
+    background-color: var(--yellow800);
+    position: relative;
+
+    .close-icon {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      width: 15px;
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+
+    .item {
+      padding: 5px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--white800);
+      }
+    }
+  }
+}

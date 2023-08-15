@@ -20,7 +20,7 @@ export default function Header({
     <div className='header-component'>
       <div className="header-container v-c">
         <div className='logo-container'>
-          <a href="/" className="center" rel="noopener noreferrer">
+          <a href={`${isDashboard? '/dashboard' : '/'}`} className="center" rel="noopener noreferrer">
             <img src={logo} className="logo" alt="logo-active" />
           </a>
         </div>

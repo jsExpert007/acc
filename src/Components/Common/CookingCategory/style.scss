@@ -1,0 +1,30 @@
+.cooking-category-component {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .category-item {
+    position: relative;
+
+    .add-recipe-pop-up {
+      position: absolute;
+      top: 180px;
+      left: -50px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cooking-category-component {
+    display: flex;
+    gap: 5px;
+
+    .category-item {
+
+      .add-recipe-pop-up {
+        top: 92px;
+        left: -97px;
+      }
+    }
+  }
+}

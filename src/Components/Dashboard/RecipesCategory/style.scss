@@ -9,12 +9,18 @@
   .category-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 20px 0;
   }
 }
 
 @media screen and (max-width: 991px) {
   .recipes-category-component {
+    h3 {
+      margin-bottom: 10px;
+    }
+
     .category-list {
       display: flex;
       gap: 5px;
