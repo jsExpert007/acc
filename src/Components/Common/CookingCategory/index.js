@@ -27,6 +27,7 @@ export default function CookingCategory({
 
   const onAddRecipes = (info) => {
     setIsAddRecipes(false);
+    navigate(`/dashboard/add-recipes/add_id/${info.id}`)
   }
 
   const onCloseAddRecipe = () => {

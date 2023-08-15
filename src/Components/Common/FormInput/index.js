@@ -21,9 +21,9 @@ export default function FormInput({
   const handleBlur = () => setIsFocused(false);
 
   return (
-    <div className="input-component">
+    <div className={`input-component ${className}`}>
       {isLabel ? <div className='label'>{label || placeholder}</div> : null}
-      <div className={`input-container ${className} ${!isFocused && validation === false && !_.isEmpty(value) ? 'error-input' : ''}`} >
+      <div className={`input-container ${!isFocused && validation === false && !_.isEmpty(value) ? 'error-input' : ''}`} >
         {icon && (
           <div className='left-icon-content center'>
             <img src={icon} alt='left-icon' className='left-icon' />

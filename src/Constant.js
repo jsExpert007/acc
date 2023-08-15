@@ -36,4 +36,16 @@ export const RecipesCategories = [
     { id: "6", name: "Sauce", logo: SauceIcon },
     { id: "7", name: "Appliances", logo: AppliancesIcon },
     { id: "8", name: "Food Hack", logo: FoodHackIcon },
-]
+];
+
+export const AddRecipesList = [
+    { id: "1", name: "Add Recipe" },
+    { id: "2", name: "Add Drink Recipe" },
+    { id: "3", name: "Add Sauce Recipe" },
+    { id: "4", name: "Add Season Recipe" },
+    { id: "5", name: "Add Food Hack" },
+    { id: "6", name: "Add Personal Care Recipe" },
+    { id: "7", name: "Import from Web" },
+    { id: "8", name: "Scan from Photo" },
+    { id: "9", name: "Scan from PDF" },
+  ]

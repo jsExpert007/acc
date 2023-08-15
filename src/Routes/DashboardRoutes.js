@@ -3,6 +3,7 @@ import { Header, } from 'src/Components';
 import {
   DashboardHomePage,
   RecipesPage,
+  AddRecipesPage,
   FoodPornPage,
   MemberFeedPage,
   FoodStoragePage,
@@ -20,6 +21,7 @@ function DashboardRoutes() {
         <Routes>
           <Route exact path="/" element={<DashboardHomePage />} />
           <Route exact path="/recipes" element={<RecipesPage />} />
+          <Route exact path="/add-recipes/add_id/:add_id" element={<AddRecipesPage />} />
           <Route exact path="/food-porn" element={<FoodPornPage />} />
           <Route exact path="/member-feed" element={<MemberFeedPage />} />
           <Route exact path="/food-storage" element={<FoodStoragePage />} />
