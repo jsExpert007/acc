@@ -6,7 +6,7 @@ import WCheckIcon from 'src/Assets/Images/Landing/check-white-icon.png';
 export default function FaqTable() {
 
   return (
-    <div class="faq-table-component">
+    <div className="faq-table-component">
       <table>
         <thead>
           <tr>
@@ -46,13 +46,13 @@ export default function FaqTable() {
             <td><img src={YCheckIcon} alt='y-check' /></td>
           </tr>
           <tr>
-            <td class="orange-colr">Detailed nutrition's - Calories, macros, nutrients, and more.</td>
+            <td className="orange-colr">Detailed nutrition's - Calories, macros, nutrients, and more.</td>
             <td></td>
             <td><img src={YCheckIcon} alt='y-check' /></td>
 
           </tr>
           <tr>
-            <td class="orange-colr">Meal planner - Plan your meals fir the day, week or month. update grocery list,
+            <td className="orange-colr">Meal planner - Plan your meals fir the day, week or month. update grocery list,
               hit your goal and take control of your diet! You can set Set it too Healthy , Custom , Sports or
               intermittent fasting or no preference. </td>
             <td></td>
@@ -60,34 +60,34 @@ export default function FaqTable() {
 
           </tr>
           <tr>
-            <td class="orange-colr">Chat gpt intergration </td>
+            <td className="orange-colr">Chat gpt intergration </td>
             <td></td>
             <td><img src={YCheckIcon} alt='y-check' /></td>
 
           </tr>
           <tr>
-            <td class="orange-colr">A Chefs Cuisine Original recipes and recipes from A.C.C affiliates. All Recipe
+            <td className="orange-colr">A Chefs Cuisine Original recipes and recipes from A.C.C affiliates. All Recipe
               access. </td>
             <td></td>
             <td><img src={YCheckIcon} alt='y-check' /></td>
 
           </tr>
           <tr>
-            <td class="orange-colr">Verified - For posting, commenting, and reviewing recipe’s Verified Takes
+            <td className="orange-colr">Verified - For posting, commenting, and reviewing recipe’s Verified Takes
               precedent over non-verified users.</td>
             <td></td>
             <td><img src={YCheckIcon} alt='y-check' /></td>
 
           </tr>
           <tr>
-            <td class="orange-colr">Gifts & Coins for non-Verified users 21%
+            <td className="orange-colr">Gifts & Coins for non-Verified users 21%
               Gifts & Coins for Verified user 80%</td>
             <td></td>
             <td><img src={YCheckIcon} alt='y-check' /></td>
 
           </tr>
           <tr>
-            <td class="orange-colr">Gold ribbon compared to regular dark blue ribbon, gold is 7.99 is for business ,
+            <td className="orange-colr">Gold ribbon compared to regular dark blue ribbon, gold is 7.99 is for business ,
               etc, and dark blue ribbon is 5.99 is for regular users.</td>
             <td></td>
             <td><img src={YCheckIcon} alt='y-check' /></td>

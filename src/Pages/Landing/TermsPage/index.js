@@ -5,7 +5,7 @@ export default function TermsPage() {
 
   return (
     <div className="terms-page">
-      <div class="container">
+      <div className="container">
         <h2>Terms of Service</h2>
         <p>Effective Date: June 13, 2023</p>
         <p>Terms of Service</p>

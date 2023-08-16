@@ -27,7 +27,8 @@ export default function CookingCategory({
 
   const onAddRecipes = (info) => {
     setIsAddRecipes(false);
-    navigate(`/dashboard/add-recipes/add_id/${info.id}`)
+    // navigate(`/dashboard/add-recipes/add_id/${info.id}`)
+    navigate(`/dashboard/create-recipes`)
   }
 
   const onCloseAddRecipe = () => {
@@ -37,9 +38,8 @@ export default function CookingCategory({
   return (
     <div className='cooking-category-component'>
       {categories.map((item, index) => (
-        <div className='category-item'>
+        <div className='category-item' key={index}>
           <CookingCategoryItem
-            key={index}
             info={item}
             onClick={onCookingCategory}
           />

@@ -14,7 +14,7 @@ export default function MenuList({
 }) {
 
   return (
-    <div class="menu-list-component">
+    <div className="menu-list-component">
       {isTopBorder && <div className='border' />}
       <div className='header v-c'>
         <h4>{title}</h4>

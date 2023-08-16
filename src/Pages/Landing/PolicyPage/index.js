@@ -5,7 +5,7 @@ export default function PolicyPage() {
 
   return (
     <div className="policy-page">
-      <div class="container">
+      <div className="container">
         <h2>Privacy Policy</h2>
         <p>Effective Date: [06/13/2023]</p>
         <p>This Privacy Policy governs the manner in which [A Chefs Cuisine] collects, uses, maintains, and discloses
