@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './style.scss';
 import { useParams } from 'react-router-dom'
+import { AddRecipesList } from 'src/Constant';
+import { AddRecipesTime } from 'src/Components';
 import AddRecipesImg from './AddRecipesImg';
 import AddRecipesDetail from './AddRecipesDetail';
-import MoreInfo from './MoreInfo';
-import { AddRecipesList } from 'src/Constant';
 
 export default function AddRecipesPage() {
 
@@ -36,7 +36,7 @@ export default function AddRecipesPage() {
           addInfo={addInfo}
           onChangeAddInfo={onChangeAddInfo}
         />
-        <MoreInfo />
+        <AddRecipesTime />
       </div>
     </div>
   );

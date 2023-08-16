@@ -6,18 +6,18 @@ export default function FaqPage() {
 
   return (
     <div className="faq-page">
-      <div class="auto-news">Auto-renews at selected price unless you cancel.<small>Try for <br />7DAYS!</small></div>
+      <div className="auto-news">Auto-renews at selected price unless you cancel.<small>Try for <br />7DAYS!</small></div>
 
-      <div class="black-bg">
-        <div class="container">
+      <div className="black-bg">
+        <div className="container">
           <h2>FAQS</h2>
-          <h3 class="sub-title-1"> 1. What's included in premium subscription? </h3>
+          <h3 className="sub-title-1"> 1. What's included in premium subscription? </h3>
           <FaqTable />
         </div>
       </div>
 
-      <div class="orange-bg">
-        <div class="container">
+      <div className="orange-bg">
+        <div className="container">
           <h3>2). What is A.C.C. (A Chefs Cuisine) About?</h3>
           <p>Welcome to our dynamic and diverse recipe website,(app coming soon) where culinary exploration knows no bounds.
             Get ready to embark on a gastronomic journey with our extensive collection of recipes that spans from
@@ -41,8 +41,8 @@ export default function FaqPage() {
         </div>
       </div>
 
-      <div class="black-bg">
-        <div class="container">
+      <div className="black-bg">
+        <div className="container">
           <h3>5). What is Food Storage?</h3>
           <p>The food storage feature allows you to store all the food you have in your home, from the refrigerator to the
             pantry. The feature updates when you use ingredients, tracks expiration dates, and enables you to find foods
@@ -63,8 +63,8 @@ export default function FaqPage() {
         </div>
       </div>
 
-      <div class="orange-bg">
-        <div class="container">
+      <div className="orange-bg">
+        <div className="container">
           <h3>
             10). Do you offer student discount? military discount, senior discount?</h3>
           <p>We offer culinary Student/Graduates discount Contact Support. Were working on others!</p>
@@ -97,8 +97,8 @@ export default function FaqPage() {
         </div>
 
       </div>
-      <div class="black-bg white-txt">
-        <div class="container">
+      <div className="black-bg white-txt">
+        <div className="container">
           <h3>
             16). How can meal planner help me?</h3>
           <p>A meal planner can help you plan and organize their meals, ensure you are getting the right nutrients and
@@ -138,7 +138,7 @@ export default function FaqPage() {
             of our global culinary Family!</p>
         </div>
       </div>
-      <div class="Join-head">
+      <div className="Join-head">
         <h4><span>-</span>Join <span>Us</span> NoW!<span>-</span></h4>
       </div>
     </div>

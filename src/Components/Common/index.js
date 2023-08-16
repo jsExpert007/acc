@@ -22,6 +22,7 @@ export { default as CategoryDropDown } from './CategoryDropDown';
 export { default as FoodItem } from './FoodItem';
 export { default as LeftInfoContainer } from './LeftInfoContainer';
 export { default as ShowVideo } from './ShowVideo';
+export { default as MultiFormInput } from './MultiFormInput';
 
 export * from './Modal'
 export * from './Button'

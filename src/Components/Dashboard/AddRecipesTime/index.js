@@ -2,10 +2,10 @@ import React from 'react';
 import './style.scss';
 import MoreItem from './MoreItem';
 
-export default function MoreInfo() {
+export default function AddRecipesTime() {
 
   return (
-    <div className="more-info-component">
+    <div className="add-recipes-time-component">
       <MoreItem
         title={'Prep time'}
         description={'25 mins'}
