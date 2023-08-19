@@ -4,15 +4,12 @@ import './style.scss';
 export default function CookingCategoryItem({
   className = '',
   info,
+  id,
+  name,
+  logo,
   selectedId,
   onClick
 }) {
-
-  const {
-    id,
-    name,
-    logo,
-  } = info;
 
   return (
     <div

@@ -18,6 +18,11 @@
     overflow: hidden;
     position: relative;
 
+    .category-logo {
+      width: 100%;
+      height: 100%;
+    }
+
     .logo-bg {
       position: absolute;
       top: 0;

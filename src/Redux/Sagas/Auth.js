@@ -17,10 +17,10 @@ import {
 function* signIn(payload) {
   try {
     const result = yield signInApi(payload.data);
-    if (result && result.token) {
-      yield put({ type: SIGN_IN_SUCCESS, data: result });
+    if (result && result.status === 'success') {
+      yield put({ type: SIGN_IN_SUCCESS, data: result.data, message: result.message });
     } else {
-      yield put({ type: SIGN_IN_FAIL, data: result });
+      yield put({ type: SIGN_IN_FAIL, data: result, message: result.message });
     }
   } catch (err) {
     alert(err);

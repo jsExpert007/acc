@@ -32,7 +32,7 @@ export default function CategoryDropDown({
               key={index}
               className='drop-list-item'
               onClick={() => onClick(item)}>
-              {item.name}
+              {item.category_name}
             </div>
           ))}
         </div>

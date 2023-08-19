@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
-import { RecipesCategories } from 'src/Constant';
+import _ from 'lodash'
+import { useSelector } from 'react-redux';
 import {
   RecipesCategory,
   FilterSearch,
@@ -10,20 +11,35 @@ import {
 
 export default function RecipesPage() {
 
-  const [currentRecipes, setCurrentRecipes] = useState(RecipesCategories[1]);
+  const {
+    category_list
+   } = useSelector(
+     state => state.Category,
+   );
 
-  const onSelectCategory = (info) => setCurrentRecipes(info);
+  const [currentCategory, setCurrentCategory] = useState([]);
+
+  useEffect(() => {
+    if(!_.isEmpty(category_list)) {
+      setCurrentCategory(category_list[0])
+    }
+  }, [category_list]);
+
+  const onSelectCategory = (info) => setCurrentCategory(info);
 
   return (
     <div className="recipes-page">
-      <RecipesCategory
-        currentRecipes={currentRecipes}
-        onClick={onSelectCategory}
-      />
+      {!_.isEmpty(category_list) && (
+        <RecipesCategory
+          currentCategory={currentCategory}
+          category_list={category_list}
+          onClick={onSelectCategory}
+        />
+      )}
       <FilterSearch
         className='filter-search'
-        category={currentRecipes}
-        dropListInfo={RecipesCategories.slice(1)}
+        currentCategory={currentCategory}
+        dropListInfo={category_list}
         onSelectCategory={onSelectCategory}
       />
       <RecipesDetail />

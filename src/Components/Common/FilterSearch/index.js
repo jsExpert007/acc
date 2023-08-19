@@ -6,11 +6,12 @@ import { CategoryDropDown } from 'src/Components';
 
 export default function FilterSearch({
   className = '',
-  category,
+  currentCategory,
   dropListInfo,
   onSelectCategory,
 }) {
 
+  console.log("==currentCategory==", currentCategory)
   const [searchText, setSearchText] = useState("");
   const onChangeSearchText = (v) => setSearchText(v);
 
@@ -19,7 +20,7 @@ export default function FilterSearch({
       <div className='search-content v-c'>
         <CategoryDropDown
           className='category-drop-down'
-          value={category.name}
+          value={currentCategory?.category_name}
           dropListInfo={dropListInfo}
           onSelect={onSelectCategory}
         />

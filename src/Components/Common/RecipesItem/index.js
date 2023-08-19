@@ -9,13 +9,8 @@ export default function RecipesItem({
 }) {
 
   const {
-    avatar,
-    name,
-    userName,
-    rating,
-    views,
-    des,
-    img
+    user,
+    name
   } = info;
 
   return (
@@ -23,25 +18,25 @@ export default function RecipesItem({
       className={`recipes-item-component ${className}`}
       onClick={onClick}>
       <div className='food-img-content'>
-        <img src={img} alt='food-img' className='food-img' />
+        <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${info.category.image}`} alt='food-img' className='food-img' />
       </div>
       <div className='detail-info v-c'>
         <div className='avatar-name v-c'>
-          <img src={avatar} alt='avatar' className='avatar' />
+          <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${user.avatar}`} alt='avatar' className='avatar' />
           <div className='name-content'>
-            <div className='name'>{name}</div>
-            <div className='user-name'>{userName}</div>
+            <div className='name'>{user.name}</div>
+            <div className='user-name'>{user.userName}</div>
           </div>
         </div>
         <div className='rating-views'>
           <div className='rating-content v-c'>
             <img src={StarIcon} alt='star-icon' />
-            <div className='rating'>{rating}</div>
+            <div className='rating'>{4.1}</div>
           </div>
-          <div className='views'>{`${views} Views`}</div>
+          <div className='views'>{`22K Views`}</div>
         </div>
       </div>
-      <div className='des'>{des}</div>
+      <div className='des'>{name}</div>
     </div>
   );
 }

@@ -1,23 +1,25 @@
 import React from 'react';
 import './style.scss';
 import { CookingCategoryItem } from 'src/Components';
-import { RecipesCategories } from 'src/Constant';
 
 export default function RecipesCategory({
-  currentRecipes,
+  currentCategory,
+  category_list,
   onClick,
 }) {
 
   return (
     <div className='recipes-category-component'>
-      <h3 className='title'>{currentRecipes.name}</h3>
+      <h3 className='title'>{currentCategory.category_name}</h3>
       <div className='category-list'>
-        {RecipesCategories.map((item, index) => (
-          item.id !== "0" &&
+        {category_list.map((item, index) => (
           <CookingCategoryItem
             key={index}
             info={item}
-            selectedId={currentRecipes.id}
+            id={item.category_id}
+            name={item.category_name}
+            logo={`${process.env.REACT_APP_IMAGE_DOMAIN}${item.category_image}`}
+            selectedId={currentCategory.category_id}
             onClick={onClick}
           />
         ))}

@@ -28,7 +28,7 @@ export default function CookingCategory({
   const onAddRecipes = (info) => {
     setIsAddRecipes(false);
     // navigate(`/dashboard/add-recipes/add_id/${info.id}`)
-    navigate(`/dashboard/create-recipes`)
+    navigate(`/dashboard/create-recipes/category_id/${info.category_id}`)
   }
 
   const onCloseAddRecipe = () => {
@@ -41,6 +41,9 @@ export default function CookingCategory({
         <div className='category-item' key={index}>
           <CookingCategoryItem
             info={item}
+            id={item.id}
+            name={item.name}
+            logo={item.logo}
             onClick={onCookingCategory}
           />
           {(isAddRecipes && item.id === "3") && (
