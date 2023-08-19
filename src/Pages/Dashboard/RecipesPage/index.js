@@ -13,14 +13,16 @@ export default function RecipesPage() {
 
   const {
     category_list
-   } = useSelector(
-     state => state.Category,
-   );
+  } = useSelector(
+    state => state.Category,
+  );
 
   const [currentCategory, setCurrentCategory] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const onChangeSearchText = (v) => setSearchText(v);
 
   useEffect(() => {
-    if(!_.isEmpty(category_list)) {
+    if (!_.isEmpty(category_list)) {
       setCurrentCategory(category_list[0])
     }
   }, [category_list]);
@@ -41,8 +43,13 @@ export default function RecipesPage() {
         currentCategory={currentCategory}
         dropListInfo={category_list}
         onSelectCategory={onSelectCategory}
+        searchText={searchText}
+        onChangeSearchText={onChangeSearchText}
       />
-      <RecipesDetail />
+      <RecipesDetail 
+        searchText={searchText}
+        currentCategory={currentCategory}
+      />
       <AllRecipes />
     </div>
   );

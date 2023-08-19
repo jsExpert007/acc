@@ -2,6 +2,8 @@
  * Modal
  */
 export const TOGGLE_AUTH_MODAL = 'TOGGLE_AUTH_MODAL';
+export const TOGGLE_VIDEO_MODAL = 'TOGGLE_VIDEO_MODAL';
+
 
 /**
  * Sidebar

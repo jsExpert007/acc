@@ -6,11 +6,19 @@
     width: 100%;
   }
 
-  .play-icon {
+  .play-icon-content {
     position: absolute;
     left: calc(50% - 30px);
     top: calc(50% - 30px);
     width: 60px !important;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--white900_70);
+
+    .play-icon {
+      width: 20px;
+      margin-left: 3px;
+    }
   }
 
   .logo {

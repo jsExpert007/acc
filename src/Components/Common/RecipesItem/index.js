@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import StarIcon from 'src/Assets/Images/Icons/star.png';
+import VideoItem from '../VideoItem';
 
 export default function RecipesItem({
   className = '',
@@ -14,25 +15,30 @@ export default function RecipesItem({
     media_type,
     media
   } = info;
-console.log("==media_type==", media_type)
-console.log("==media==", media)
+
   return (
     <div
       className={`recipes-item-component ${className}`}
       onClick={onClick}>
       <div className='food-img-content'>
-        {media_type === 'images' ? (
-        <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${media}`} alt='food-img' className='food-img' />
-        ): (
-          null
+        {media_type.includes("image") ? (
+          <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${media}`} alt='food-img' className='food-img' />
+        ) : (
+          <VideoItem
+            media={media}
+          />
         )}
       </div>
       <div className='detail-info v-c'>
         <div className='avatar-name v-c'>
-          <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${user.avatar}`} alt='avatar' className='avatar' />
+          <img
+            src={`${process.env.REACT_APP_IMAGE_DOMAIN}${user.avatar}`}
+            alt='avatar'
+            className='avatar'
+          />
           <div className='name-content'>
             <div className='name'>{user.name}</div>
-            <div className='user-name'>{user.userName}</div>
+            <div className='user-name'>{`@${user.username}`}</div>
           </div>
         </div>
         <div className='rating-views'>

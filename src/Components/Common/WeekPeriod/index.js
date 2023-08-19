@@ -7,7 +7,7 @@ export default function WeekPeriod({
 
   return (
     <div className={`week-period-component ${className}`}>
-      <div className='date'>{`01/08/2023 - 01/14/2023`}</div>
+      <div className='date'>{`08/20/2023 - 08/26/2023`}</div>
     </div>
   );
 }

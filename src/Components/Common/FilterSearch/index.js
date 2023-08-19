@@ -9,11 +9,9 @@ export default function FilterSearch({
   currentCategory,
   dropListInfo,
   onSelectCategory,
+  searchText,
+  onChangeSearchText
 }) {
-
-  console.log("==currentCategory==", currentCategory)
-  const [searchText, setSearchText] = useState("");
-  const onChangeSearchText = (v) => setSearchText(v);
 
   return (
     <div className={`filter-search-component ${className}`}>

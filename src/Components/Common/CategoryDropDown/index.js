@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './style.scss';
 import _ from 'lodash';
-import { ReactSVG } from 'react-svg'
 import ArrowUpIcon from 'src/Assets/Images/Icons/arrow-up.svg';
 
 export default function CategoryDropDown({

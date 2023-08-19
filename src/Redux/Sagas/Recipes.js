@@ -38,7 +38,7 @@ function* createRecipe(payload) {
     const result = yield createRecipeApi(payload.data);
     console.log("===create recipe res===", result)
     if (result && result.status === 'success') {
-      yield put({ type: CREATE_RECIPE_SUCCESS, data: result.data });
+      yield put({ type: CREATE_RECIPE_SUCCESS, data: result });
     } else {
       yield put({ type: CREATE_RECIPE_FAIL, data: result });
     }
