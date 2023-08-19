@@ -16,6 +16,10 @@
     padding: 0 10px 0 3px;
     background-color: var(--white800);
 
+    &.error-input {
+      border: solid 1px red;
+    }
+
     ::placeholder {
       color: var(--gray800);
     }

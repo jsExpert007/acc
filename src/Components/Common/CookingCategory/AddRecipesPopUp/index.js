@@ -1,11 +1,18 @@
 import React from 'react';
 import './style.scss';
+import _ from 'lodash'
+import { useSelector } from 'react-redux';
 import CloseIcon from "src/Assets/Images/Icons/add.svg";
-import { AddRecipesList } from 'src/Constant';
 
 export default function AddRecipesPopUp({
   className = '', onClick, onClose
 }) {
+
+  const {
+    category_list
+   } = useSelector(
+     state => state.Category,
+   );
 
   return (
     <div className={`add-recipe-pop-up-component ${className}`}>
@@ -14,12 +21,12 @@ export default function AddRecipesPopUp({
         <img src={CloseIcon} alt='close-icon' className='close-icon' onClick={onClose} />
       </div>
       <div className='body'>
-        {AddRecipesList.map((item, index) => (
+        {!_.isEmpty(category_list) && category_list.map((item, index) => (
           <li
             key={index}
             className={'item'}
             onClick={() => onClick(item)}>
-            {item.name}
+            {`Add ${item.category_name}`}
           </li>
         ))}
       </div>

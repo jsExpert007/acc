@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.scss';
-import { AccSwitch, SearchInput } from 'src/Components';
+import { AccSwitch } from 'src/Components';
 
 export default function VideoViewMethod({
   className = '',
@@ -11,7 +11,7 @@ export default function VideoViewMethod({
   return (
     <div className={`video-view-method-component v-c ${className}`}>
       <div className='method'>Default view</div>
-      <AccSwitch 
+      <AccSwitch
         value={isDefaultView}
         onChange={onChange}
       />

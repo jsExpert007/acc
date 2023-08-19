@@ -4,12 +4,17 @@
   justify-content: center;
   height: 60px;
   width: 100%;
-  border: solid 1px var(--gray700);
-  padding: 0 15px;
+  border: solid 1px var(--black900);
   position: relative;
-
+  border-radius: 10px;
+  
   .select-header {
+    padding: 0 15px;
     justify-content: space-between;
+
+    .arrow-down {
+      transform: rotate(180deg);
+    }
   }
 
   .label {

@@ -6,10 +6,12 @@ import { EventEmitter } from 'src/Utils/Events';
 import { NotificationContainer } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import { LandingRoutes, DashboardRoutes } from 'src/Routes';
+import { useDispatch } from 'react-redux';
 import {
   // Sidebar,
   AllModals,
 } from 'src/Components';
+import { getCategories, } from 'src/Redux/Actions';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,10 +29,19 @@ const override = {
   left: '50%',
 };
 
+
+
+
 function App() {
+  const dispatch = useDispatch();
+
   const [loading, setLoading] = useState(false);
 
   EventEmitter.subscribe('isLoading', (event) => setLoading(event));
+
+  useEffect(() => {
+    dispatch(getCategories());
+  }, []);
 
   return (
     <BrowserRouter>
@@ -39,8 +50,8 @@ function App() {
         {/* <Sidebar /> */}
         <div className="content">
           <Routes>
-            <Route exact path="/*" element={<LandingRoutes />} />
             <Route exact path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route exact path="/*" element={<LandingRoutes />} />
           </Routes>
         </div>
         <AllModals />
@@ -48,7 +59,7 @@ function App() {
           <BeatLoader
             cssOverride={override}
             size={30}
-            color={"#1BD0A5"}
+            color={"#FF8000"}
             loading={loading}
           />
         </div>

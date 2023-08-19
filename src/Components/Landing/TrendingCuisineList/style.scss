@@ -13,6 +13,11 @@
   .trending-cuisines-container {
     display: grid;
     gap: 48px 20px;
+
+    .not-result {
+      font-size: 24px;
+      font-weight: 700;
+    }
   }
 }
 

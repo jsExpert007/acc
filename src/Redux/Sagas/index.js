@@ -3,12 +3,18 @@ import { all, fork } from 'redux-saga/effects';
 import {
   watchGetFaq
 } from './Other';
-
 import {
   watchSignIn,
   watchForgotPassword,
   watchSignUp,
 } from './Auth';
+import {
+  watchGetRecipes,
+  watchCreateRecipe
+} from './Recipes';
+import {
+  watchGetCategories,
+} from './Category';
 
 export default function* rootSaga() {
   yield all([
@@ -17,5 +23,11 @@ export default function* rootSaga() {
     fork(watchSignIn),
     fork(watchForgotPassword),
     fork(watchSignUp),
+    fork(watchGetRecipes),
+    fork(watchCreateRecipe),
+
+    fork(watchGetCategories),
+
+
   ]);
 }

@@ -1,5 +1,5 @@
 .continue-btn {
-  background: var(--gray900);
+  background-color: var(--gray900);
   border: none;
   height: 38px;
   border-radius: 38px;
@@ -8,12 +8,17 @@
 
 
   &.disabled {
-    background-color: var(--grey200_60)
+    background-color: var(--grey200);
+    opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: .3;
+    }
   }
 
   &:hover,
   &:focus {
-    color: var(--yellow800);
     opacity: .9;
   }
 

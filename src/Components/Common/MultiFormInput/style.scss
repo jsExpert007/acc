@@ -18,6 +18,10 @@
     border: solid 1px var(--black900);
     padding: 15px;
 
+    &.error-input {
+      border: 2px solid red;
+    }
+
     &.active {
       border: solid 2px var(--yellow800);
     }
