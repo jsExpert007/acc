@@ -8,14 +8,16 @@ export default function RecipesDetails({
   onChangeRecipes,
 }) {
 
+  const recipeTypeName = subCategories.find((e) => e.id === recipesInfo.recipe_type_id)?.name || "";
+
   return (
     <div className="recipes-details-component">
       <div className="container recipes-details-container">
         <DropDownSelect 
           label={'Recipe Type'}
           dropListInfo={subCategories}
-          value={recipesInfo.type}
-          onSelect={e => onChangeRecipes('type', e.name)}
+          value={recipeTypeName}
+          onSelect={e => onChangeRecipes('recipe_type_id', e.id)}
         />
         <MultiFormInput
           label={'Ingredients'}

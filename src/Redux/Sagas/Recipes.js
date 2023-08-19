@@ -33,9 +33,10 @@ export function* watchGetRecipes() {
 /**
  * Create Recipe
 */
-function* createRecipe() {
+function* createRecipe(payload) {
   try {
-    const result = yield createRecipeApi();
+    const result = yield createRecipeApi(payload.data);
+    console.log("===create recipe res===", result)
     if (result && result.status === 'success') {
       yield put({ type: CREATE_RECIPE_SUCCESS, data: result.data });
     } else {

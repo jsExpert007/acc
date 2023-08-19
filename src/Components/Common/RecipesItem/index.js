@@ -10,15 +10,22 @@ export default function RecipesItem({
 
   const {
     user,
-    name
+    name,
+    media_type,
+    media
   } = info;
-
+console.log("==media_type==", media_type)
+console.log("==media==", media)
   return (
     <div
       className={`recipes-item-component ${className}`}
       onClick={onClick}>
       <div className='food-img-content'>
-        <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${info.category.image}`} alt='food-img' className='food-img' />
+        {media_type === 'images' ? (
+        <img src={`${process.env.REACT_APP_IMAGE_DOMAIN}${media}`} alt='food-img' className='food-img' />
+        ): (
+          null
+        )}
       </div>
       <div className='detail-info v-c'>
         <div className='avatar-name v-c'>
