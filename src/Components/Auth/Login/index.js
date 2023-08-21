@@ -48,8 +48,8 @@ export default function Login({
   }, [dispatch, login_loading, login_success, navigate, login_res, user, token]);
 
   const [userInfo, setUserInfo] = useState({
-    email: 'user@gmail.com',
-    password: 'user@123',
+    email: '', //user@gmail.com
+    password: '', //user@123
   });
 
   const onChangeUser = (field, value) => {

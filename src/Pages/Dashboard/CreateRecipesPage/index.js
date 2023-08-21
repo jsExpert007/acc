@@ -55,16 +55,16 @@ export default function CreateRecipesPage() {
   const [subCategories, setSubCategories] = useState([]);
 
     const [recipesInfo, setRecipesInfo] = useState({
-    recipeName: 'test',
-    recipe_type_id: "",
-    ingredients: 'test',
-    subtitles: 'test',
-    steps: 'test',
-    about: 'test',
-    nutrition: 'test',
-    tag: 'test',
-    tools: 'test',
-    notes: 'test',
+    recipeName: '',
+    recipe_type_id: '',
+    ingredients: '',
+    subtitles: '',
+    steps: '',
+    about: '',
+    nutrition: '',
+    tag: '',
+    tools: '',
+    notes: '',
     media: '',
   });
 
