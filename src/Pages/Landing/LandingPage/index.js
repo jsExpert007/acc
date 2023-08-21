@@ -8,22 +8,25 @@ import {
   ChefsTrendingCuisines,
   WeeklyFoodPlan,
 } from 'src/Components';
+import { AllRecipesFist } from 'src/Constant';
 
 export default function LandingPage() {
 
   const {
     category_list
-   } = useSelector(
-     state => state.Category,
-   );
+  } = useSelector(
+    state => state.Category,
+  );
 
-  const [currentCategory, setCurrentCategory] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState(AllRecipesFist);
+  const [searchText, setSearchText] = useState("");
+  const onChangeSearchText = (v) => setSearchText(v);
 
-  useEffect(() => {
-    if(!_.isEmpty(category_list)) {
-      setCurrentCategory(category_list[0])
-    }
-  }, [category_list]);
+  // useEffect(() => {
+  //   if (!_.isEmpty(category_list)) {
+  //     setCurrentCategory(category_list[0])
+  //   }
+  // }, [category_list]);
 
   const onSelectCategory = (info) => setCurrentCategory(info);
 
@@ -33,10 +36,16 @@ export default function LandingPage() {
       <FilterSearch
         className='filter-search'
         currentCategory={currentCategory}
-        dropListInfo={category_list}
+        dropListInfo={[AllRecipesFist, ...category_list]}
         onSelectCategory={onSelectCategory}
+        searchText={searchText}
+        onChangeSearchText={onChangeSearchText}
       />
-      <ChefsTrendingCuisines isLanding />
+      <ChefsTrendingCuisines
+        isLanding
+        searchText={searchText}
+        currentCategory={currentCategory}
+      />
       <WeeklyFoodPlan />
     </div>
   );

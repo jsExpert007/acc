@@ -22,9 +22,9 @@ export default function DropDownSelect({
 
   return (
     <div className={`drop-down-select-component ${className}`}>
+      <div className='label'>{label}</div>
       <div className='select-header v-c' onClick={onToggleDropList} >
         <div className='main-description-content'>
-          <div className='label'>{label}</div>
           {value ? (
             <div className='value'>{value}</div>
           ) : (

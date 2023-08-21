@@ -5,12 +5,18 @@ import {
   RecipesList,
 } from 'src/Components';
 
-export default function RecipesDetail() {
+export default function RecipesDetail({
+  searchText='',
+  currentCategory
+}) {
 
   return (
     <div className='recipes-detail-component'>
       <FollowsNewRecipes />
-      <RecipesList />
+      <RecipesList 
+        searchText={searchText}
+        currentCategory={currentCategory}
+      />
     </div>
   );
 }

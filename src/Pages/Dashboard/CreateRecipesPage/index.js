@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './style.scss';
 import _ from 'lodash'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import HeadImg from 'src/Assets/Images/Dashboard/CreateRecipes/create-recipes-bg.png';
 import { AddRecipesTime, ContinueBtn } from 'src/Components';
@@ -13,6 +13,7 @@ import { createRecipe, } from 'src/Redux/Actions';
 
 export default function CreateRecipesPage() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   let { category_id } = useParams();
 
@@ -35,7 +36,8 @@ export default function CreateRecipesPage() {
     if (LoadingRef.current && !create_recipe_loading) {
       hideSpinner();
       if (create_recipe_success) {
-        showToast('success', 3000, create_recipe_res)
+        showToast('success', 3000, create_recipe_res);
+        navigate('/dashboard');
       } else {
         showToast('error', 3000, create_recipe_res)
       }
@@ -54,7 +56,7 @@ export default function CreateRecipesPage() {
 
     const [recipesInfo, setRecipesInfo] = useState({
     recipeName: '',
-    type: '',
+    recipe_type_id: '',
     ingredients: '',
     subtitles: '',
     steps: '',
@@ -77,9 +79,11 @@ export default function CreateRecipesPage() {
     showSpinner();
     const formData = new FormData()
     formData.append('category_id', category_id);
+    formData.append('recipe_type_id', recipesInfo.recipe_type_id);
     formData.append('name', recipesInfo.recipeName);
     formData.append('ingredients', recipesInfo.ingredients);
     formData.append('subtitles', recipesInfo.subtitles);
+    formData.append('steps', recipesInfo.steps);
     formData.append('about', recipesInfo.about);
     formData.append('nutrition', recipesInfo.nutrition);
     formData.append('tag', recipesInfo.tag);

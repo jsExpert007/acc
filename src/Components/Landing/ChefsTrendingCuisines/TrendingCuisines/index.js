@@ -6,13 +6,18 @@ import {
 } from 'src/Components';
 
 export default function TrendingCuisines({
-  isLanding
+  isLanding,
+  searchText = '',
+  currentCategory
 }) {
 
   return (
     <div className='trending-cuisines-component'>
       <CookingCategory isLanding={isLanding} />
-      <TrendingCuisineList />
+      <TrendingCuisineList 
+        searchText={searchText}
+        currentCategory={currentCategory}
+      />
     </div>
   );
 }
