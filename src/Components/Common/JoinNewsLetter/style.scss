@@ -1,0 +1,27 @@
+.join-news-letter-component {
+  border: 1px solid #fff;
+  display: inline-block;
+  width: 100%;
+  display: flex;
+  padding: 5px 0;
+  margin-bottom: 10px;
+
+  .news-letter-input {
+    flex: 1;
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 0 15px;
+    font-size: 18px;
+  }
+
+  .bar {
+    width: 0.5px;
+    background-color: var(--white900);
+  }
+
+  .send-mail-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+}

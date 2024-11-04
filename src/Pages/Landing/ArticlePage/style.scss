@@ -1,0 +1,43 @@
+.article-page {
+  padding-top: 70px;
+
+  h2 {
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--yellow800);
+    text-align: center;
+  }
+
+  .articles-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px 20px;
+    padding: 100px 0;
+  }
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .article-page {
+    .articles-list {
+      grid-template-columns: repeat(3, 1fr);
+
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .article-page {
+    padding: 30px 15px;
+
+    h2 {
+      font-size: 30px;
+    }
+
+    .articles-list {
+      padding: 30px 0;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
+  }
+}

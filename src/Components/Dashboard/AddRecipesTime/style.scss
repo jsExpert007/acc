@@ -1,0 +1,10 @@
+.add-recipes-time-component {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .add-recipes-time-component {}
+}

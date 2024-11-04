@@ -1,0 +1,10 @@
+.social-logins-component {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  
+  .auth-btn {
+    width: 227px;
+    align-self: center;
+  }
+}

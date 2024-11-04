@@ -1,0 +1,10 @@
+.trending-cuisines-component {
+  flex: 1;
+  padding: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  .trending-cuisines-component {
+    padding: 0;
+  }
+}

@@ -34,12 +34,11 @@ export default (state = INITIAL, action) => {
       }
     }
     case SIGN_IN_FAIL: {
-      const { error } = action.data;
       return {
         ...state,
         user: null,
         token: null,
-        login_res: error,
+        login_res: action.message,
         login_loading: false,
         login_success: false,
       }
@@ -56,7 +55,7 @@ export default (state = INITIAL, action) => {
         ...state,
         user,
         token,
-        login_res: '',
+        login_res: action.message,
         login_loading: false,
         login_success: true,
       }

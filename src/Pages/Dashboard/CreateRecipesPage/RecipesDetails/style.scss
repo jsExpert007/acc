@@ -1,0 +1,25 @@
+.recipes-details-component {
+  .recipes-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .ingredients-input,
+    .steps-input {
+      .input-container {
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .recipes-details-component {
+    .recipes-details-container {
+      gap: 20px;
+    }
+  }
+}

@@ -31,6 +31,10 @@
   box-shadow: 0px 14px 30px rgba(3, 45, 30, 0.21);
 }
 
+.btn-shadow {
+  box-shadow: 0 7px 5px rgba(3, 45, 30, 0.21);
+}
+
 .svg-icon {
   display: flex;
   align-items: center;
@@ -216,6 +220,22 @@ input, textarea {
   }
 }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .show-web {
     display: block;
@@ -250,6 +270,11 @@ input, textarea {
 }
 
 @media screen and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
   .show-mobile {
     display: block;
   }
@@ -262,4 +287,8 @@ input, textarea {
   .show-mobile-flex {
     display: flex;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }

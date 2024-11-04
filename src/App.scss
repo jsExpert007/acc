@@ -1,5 +1,19 @@
 @import './Assets/scss/index.scss';
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 67px;
+  }
+}
+
+
 .overlay-loader {
   z-index: 1010;
   position: fixed;

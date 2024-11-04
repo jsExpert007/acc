@@ -1,0 +1,36 @@
+.lading-start-component {
+  background: no-repeat url('../../../Assets/Images/Landing/landing-bg.png');
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 70px;
+
+  h1 {
+    color: var(--yellow700);
+    font-size: 44px;
+    max-width: 1250px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .lading-start-component {
+    min-height: 479px;
+    background-size: 100% 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .lading-start-component {
+    min-height: 300px;
+    background-size: auto 100%;
+    padding-bottom: 30px;
+    margin: -15px;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+}

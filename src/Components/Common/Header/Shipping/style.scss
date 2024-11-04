@@ -1,0 +1,25 @@
+.shipping-component {
+  height: 50px;
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .shipping-icon {
+    z-index: 3;
+    height: 33px;
+  }
+
+  .shipping-num {
+    z-index: 1;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: var(--yellow800);
+    color: var(--white900);
+    position: absolute;
+    top: 1px;
+    right: -6px;
+  }
+}

@@ -1,0 +1,21 @@
+.food-porn-page {
+  padding-top: 100px;
+
+  .search-input {
+    max-width: 800px;
+  }
+
+  .right-content {
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .food-porn-page {
+    padding: 30px 15px;
+
+    .right-content {
+      padding: 0;
+    }
+  }
+}

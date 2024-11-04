@@ -1,0 +1,14 @@
+.week-period-component {
+  padding: 20px 27px;
+  border-radius: 16px;
+  background-color: var(--blue200);
+
+  .date {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .week-period-component {}
+}

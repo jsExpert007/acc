@@ -1,133 +1,55 @@
 .header-component {
+  height: 67px;
   position: fixed;
+  top: 0;
   z-index: 10;
   color: white;
-  background: white;
+  background: var(--black900);
   width: 100%;
-  top: 40px;
   box-shadow: 0px 4px 45px rgba(42, 26, 127, 0.07);
-
-  &.disable-top-menu {
-    top: 0;
-  }
 
   .header-container {
     height: 100%;
+    padding: 0 15px;
     justify-content: space-between;
-    .web-menu {
-      .text-menu {
-        &:last-child {
-          margin-right: 0;
-        }
+
+    .logo-container {
+      padding: 0 20px;
+
+      .logo {
+        height: 57px;
       }
     }
 
-    .phone-txt {
-      color: var(--blue900);
-    }
-  }
+    .menu-list {
+      flex: 1;
+      justify-content: space-between;
 
-  .text-menu {
-    margin-right: 39px;
-    padding-bottom: 4px;
+      .box-menu {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 0 20px;
+        cursor: pointer;
 
-    &:last-child {
-      margin-right: 0;
-    }
 
-    &:hover {
-      color: var(--green800);
-      padding-top: 2px;
-    }
-  }
-
-  .box-menu {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 500;
-    color: var(--white900);
-    padding: 8px 18px;
-    background: var(--green800);
-    margin-right: 20px;
-    text-align: center;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .sign-up-btn {
-    cursor: pointer;
-  }
-
-  .sign-in {
-    background-color: var(--green800_10);
-    color: var(--green800);
-  }
-
-  .menu-item {
-    color: var(--blue900);
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  .svg-icon {
-    fill: var(--main-color);
-  }
-
-  .logo-inactive {
-    display: none;
-  }
-
-  &.inactive {
-    background: transparent;
-    box-shadow: none;
-
-    .logo-active {
-      display: none;
-    }
-
-    .logo-inactive {
-      display: block;
-    }
-
-    .svg-icon {
-      fill: white;
-    }
-
-    .pricing-menu {
-      .pricing-header {
-        p {
-          color: white;
+        &.auth-btn {
+          color: var(--yellow800);
         }
       }
-    }
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .header-component {
-    height: 87px;
-
-    .logo {
-      margin-top: -14px;
     }
   }
 }
 
 @media screen and (max-width: 991px) {
   .header-component {
-    height: 70px;
-    top: 0;
+    .header-container {
+      .menu-list {
+        justify-content: flex-end;
 
-    .logo {
-      width: 108px;
-    }
-
-    .box-menu {
-      font-size: 12px;
-      padding: 5px 10px;
-      margin-right: 10px;
+        .box-menu {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
